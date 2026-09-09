@@ -14,42 +14,44 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    "https://bhansali-stainless-assignment.vercel.app"
+  ),
+
   title: {
     default: "Stainless Steel Flanges | Bhansali Stainless",
     template: "%s | Bhansali Stainless",
   },
+
   description:
     "Stainless steel flanges in grades 304, 316 and 316L for industrial buyers across UAE, Saudi Arabia and the GCC.",
-  keywords: [
-    "stainless steel flanges",
-    "SS 304 flanges",
-    "SS 316 flanges",
-    "SS 316L flanges",
-    "stainless steel exporter",
-    "UAE stainless steel supplier",
-    "Saudi Arabia stainless steel supplier",
-    "GCC industrial flanges",
-  ],
+
+  alternates: {
+    canonical: "/",
+  },
+
   robots: {
     index: true,
     follow: true,
   },
+
   openGraph: {
     title: "Stainless Steel Flanges | Bhansali Stainless",
     description:
       "B2B stainless steel flange supply for UAE, Saudi Arabia and GCC industrial buyers.",
+    url: "/",
     type: "website",
-    locale: "en_US",
   },
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
   return (
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">{children}{gtmId && <GoogleTagManager gtmId={gtmId} />}</body>
     </html>
   );
 }
