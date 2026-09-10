@@ -43,7 +43,7 @@ export default function Specifications() {
   return (
     <section
       id="specifications"
-      className="bg-white py-20 sm:py-24 lg:py-28"
+      className="bg-white py-20 sm:py-24 lg:py-28 content-visibility-auto"
     >
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.78fr_1.22fr] lg:gap-16">

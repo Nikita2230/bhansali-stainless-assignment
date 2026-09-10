@@ -47,7 +47,7 @@ const highlights = [
 
 export default function ProductOverview() {
   return (
-    <section id="overview" className="bg-white py-20 sm:py-24 lg:py-28">
+    <section id="overview" className="content-visibility-auto bg-white py-20 sm:py-24 lg:py-28">
       <Container>
         <div className="grid gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">
           {/* Left */}

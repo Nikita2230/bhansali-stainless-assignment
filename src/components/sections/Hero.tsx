@@ -1,6 +1,6 @@
-"use client";
 
-import { motion } from "motion/react";
+
+
 import {
   ArrowRight,
   CheckCircle2,
@@ -18,20 +18,15 @@ export default function Hero() {
       <div className="absolute inset-y-0 right-0 hidden w-[42%] bg-[#EAF0F4] lg:block" />
 
       <Container className="relative">
-        <div className="grid min-h-[650px] items-center gap-12 py-14 md:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-20">
+        <div className="grid items-center gap-12 py-14 md:py-16 lg:grid-cols-[1.05fr_0.95fr] lg:gap-16 lg:py-20">
           {/* Left content */}
-          <motion.div
-            initial={{ opacity: 0, y: 28 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.65, ease: "easeOut" }}
-            className="max-w-[680px]"
-          >
+          <div className="max-w-[680px] animate-hero-in">
             <div className="mb-5 inline-flex items-center gap-2 rounded-full border border-[#D7E0E7] bg-white px-3.5 py-2 text-xs font-semibold uppercase tracking-[0.12em] text-[#1F4E79]">
               <span className="h-2 w-2 rounded-full bg-[#E8792E]" />
               Exporting Across UAE, Saudi Arabia & GCC
             </div>
 
-            <h1 className="max-w-[650px] text-[42px] font-bold leading-[1.08] tracking-[-0.035em] text-[#0B1F33] sm:text-[52px] lg:text-[64px]">
+            <h1 className="max-w-[650px] text-[38px] font-bold leading-[1.08] tracking-[-0.035em] text-[#0B1F33] sm:text-[52px] lg:text-[64px]">
               Stainless Steel
               <span className="block text-[#1F4E79]">Flanges for Global Industry</span>
             </h1>
@@ -105,15 +100,10 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
 
           {/* Right product visual */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.96 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.75, delay: 0.15, ease: "easeOut" }}
-            className="relative"
-          >
+          <div className="relative animate-hero-scale">
             <div className="relative mx-auto max-w-[560px]">
               <div className="absolute -left-5 top-10 h-28 w-28 rounded-full border border-[#CDD8E0]" />
               <div className="absolute -right-8 bottom-10 h-44 w-44 rounded-full border border-[#D7E0E7]" />
@@ -196,7 +186,7 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-          </motion.div>
+          </div>
         </div>
       </Container>
     </section>

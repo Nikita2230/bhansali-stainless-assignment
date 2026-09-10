@@ -53,7 +53,7 @@ const types = [
 
 export default function ProductTypes() {
   return (
-    <section className="bg-[#F5F7F9] py-20 sm:py-24 lg:py-28">
+    <section className="bg-[#F5F7F9] py-20 sm:py-24 lg:py-28 content-visibility-auto">
       <Container>
         <motion.div
           initial={{ opacity: 0, y: 30 }}

@@ -45,7 +45,7 @@ export default function Certifications() {
   return (
     <section
       id="certifications"
-      className="bg-[#F5F7F9] py-20 sm:py-24 lg:py-28"
+      className="bg-[#F5F7F9] py-20 sm:py-24 lg:py-28 content-visibility-auto"
     >
       <Container>
         <div className="grid gap-12 lg:grid-cols-[0.75fr_1.25fr] lg:gap-16">

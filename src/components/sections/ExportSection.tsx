@@ -54,7 +54,7 @@ export default function ExportSection() {
   return (
     <section
       id="export"
-      className="overflow-hidden bg-[#0B1F33] py-20 text-white sm:py-24 lg:py-28"
+      className="overflow-hidden bg-[#0B1F33] py-20 text-white sm:py-24 lg:py-28 content-visibility-auto"
     >
       <Container>
         <div className="grid items-center gap-14 lg:grid-cols-[0.9fr_1.1fr] lg:gap-20">

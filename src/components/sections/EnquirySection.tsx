@@ -121,7 +121,7 @@ const [submitError, setSubmitError] = useState("");
   return (
     <section
       id="enquiry"
-      className="bg-[#F5F7F9] py-20 sm:py-24 lg:py-28"
+      className="bg-[#F5F7F9] py-20 sm:py-24 lg:py-28 content-visibility-auto"
     >
       <Container>
         <div className="grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-16">

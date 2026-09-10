@@ -56,7 +56,7 @@ export default function GradeVariants() {
   return (
     <section
       id="grades"
-      className="bg-[#0B1F33] py-20 text-white sm:py-24 lg:py-28"
+      className="bg-[#0B1F33] py-20 text-white sm:py-24 lg:py-28 content-visibility-auto"
     >
       <Container>
         <motion.div
