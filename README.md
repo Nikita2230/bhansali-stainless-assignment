@@ -123,11 +123,11 @@ The project is deployed on Vercel.
 
 Live URL:
 
-`PASTE_YOUR_VERCEL_URL_HERE`
+`https://bhansali-stainless-assignment.vercel.app/`
 
 GitHub Repository:
 
-`PASTE_YOUR_GITHUB_REPOSITORY_URL_HERE`
+`https://github.com/Nikita2230/bhansali-stainless-assignment`
 
 ## Notes
 
