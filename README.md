@@ -1,36 +1,151 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Bhansali Stainless – Website Developer Assignment
 
-## Getting Started
+This project was created as part of the screening assignment for the Website Developer role for the Bhansali Stainless engagement.
 
-First, run the development server:
+## Project Overview
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+The assignment was to build a responsive B2B product category page for stainless steel flanges, targeting buyers in Saudi Arabia, UAE, and the wider Middle East.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+The page includes:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- Product overview
+- Stainless steel grade variants: 304, 316, 316L
+- Flange types
+- Technical specifications
+- Certifications / ASTM / ISO placeholder section
+- Export and shipping information
+- Prominent phone, email, and WhatsApp enquiry options
+- Working lead capture form
+- Client-side form validation
+- Google Sheet lead storage
+- Google Tag Manager integration
+- Mock GA4 `generate_lead` event
+- Responsive desktop, tablet, and mobile layouts
+- SEO metadata and semantic HTML
+- Performance optimization
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Tech Stack
 
-## Learn More
+- Next.js
+- TypeScript
+- Tailwind CSS
+- Motion / Framer Motion
+- Lucide React
+- Google Apps Script
+- Google Sheets
+- Google Tag Manager
+- Google Analytics 4
+- Vercel
 
-To learn more about Next.js, take a look at the following resources:
+## Lead Capture Flow
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The enquiry form collects:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Name
+- Email
+- Phone
+- Product Interest
 
-## Deploy on Vercel
+Client-side validation is applied before submission.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+After a valid submission:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. The form sends data to a Next.js API route.
+2. The API route forwards the lead to a Google Apps Script endpoint.
+3. The lead is stored in a Google Sheet.
+4. A `generate_lead` event is pushed to Google Tag Manager.
+5. GTM fires the configured GA4 lead event.
+
+This ensures the lead is only tracked after a successful submission.
+
+## Analytics Event
+
+Event name:
+
+`generate_lead`
+
+Event parameters:
+
+- `form_name`
+- `product_interest`
+- `lead_source`
+
+## Performance
+
+Google PageSpeed Insights results:
+
+### Mobile
+- Performance: 93
+- LCP: 1.2s
+- CLS: 0
+- FCP: 0.9s
+- Speed Index: 0.9s
+
+### Desktop
+- Performance: 100
+- LCP: 0.5s
+- CLS: 0
+- FCP: 0.3s
+- TBT: 60ms
+- Speed Index: 0.6s
+
+## Performance Optimizations
+
+The project includes:
+
+- Lightweight hero implementation
+- Reduced client-side animation overhead
+- CSS-based hero animation
+- Content visibility optimization for below-the-fold sections
+- Minimal external dependencies
+- Responsive layouts without unnecessary large assets
+- Optimized production build
+- Semantic HTML and accessible form markup
+
+## Accessibility & SEO
+
+The page includes:
+
+- Semantic heading hierarchy
+- Accessible form labels
+- Validation feedback
+- Focus-visible styles
+- Keyboard-friendly navigation
+- Reduced-motion support
+- Meta title and description
+- Open Graph metadata
+- Canonical URL
+- Search engine indexing directives
+
+## Deployment
+
+The project is deployed on Vercel.
+
+Live URL:
+
+`PASTE_YOUR_VERCEL_URL_HERE`
+
+GitHub Repository:
+
+`PASTE_YOUR_GITHUB_REPOSITORY_URL_HERE`
+
+## Notes
+
+The technical specifications and ASTM / ISO references are presented as placeholders where actual Bhansali Stainless product data or certification documents were not provided in the assignment brief.
+
+No production certification claims or unsupported product specifications have been added.
+
+## Assignment Evidence
+
+The following were verified during testing:
+
+- Responsive desktop layout
+- Responsive tablet layout
+- Responsive mobile layout
+- Working form validation
+- Successful Google Sheet lead storage
+- GTM `generate_lead` event
+- GA4 lead-event tracking
+- Mobile PageSpeed score above 90
+- Desktop PageSpeed score of 100
+- Successful production build
